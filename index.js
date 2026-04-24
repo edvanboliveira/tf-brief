@@ -52,7 +52,7 @@ function printTable(grouped) {
   printGroup('Add', grouped.add, chalk.green);
   printGroup('Update', grouped.update, chalk.yellow);
   printGroup('Delete', grouped.delete, chalk.red);
-  printGroup('Replace', grouped.replace, chalk.magenta);
+  printGroup('Replace', grouped.replace, chalk.blue);
 }
 
 function summarizeCounts(grouped) {
@@ -65,12 +65,15 @@ function summarizeCounts(grouped) {
 }
 
 function printSummary(summary) {
-  console.log(chalk.bold('\nTerraform Plan Summary\n'));
-
-  console.log(chalk.green(`Add: ${summary.add}`));
-  console.log(chalk.yellow(`Change: ${summary.update}`));
-  console.log(chalk.red(`Delete: ${summary.delete}`));
-  console.log(chalk.magenta(`Replace: ${summary.replace}`));
+  console.log(
+    chalk.bold('\nTotal Changes:\n\n') +
+    [
+      chalk.green(`Add: ${summary.add}`),
+      chalk.yellow(`Change: ${summary.update}`),
+      chalk.red(`Delete: ${summary.delete}`),
+      chalk.blue(`Replace: ${summary.replace}`)
+    ].join('  ')
+  );
 }
 
 module.exports = {
