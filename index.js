@@ -29,10 +29,10 @@ function categorize(plan) {
 }
 
 function printTable(grouped) {
-  console.log('\nChanges by Resource:\n');
+  console.log(`\n${chalk.bold("Overview of Planned Resource Changes:")}\n`);
 
   console.log('+-----------+---------------------------------------------+');
-  console.log('| CHANGE    | NAME                                        |');
+  console.log('| ACTION    | RESOURCE                                    |');
   console.log('+-----------+---------------------------------------------+');
 
   const printGroup = (label, items, colorFn) => {
@@ -49,10 +49,10 @@ function printTable(grouped) {
     console.log('+-----------+---------------------------------------------+');
   };
 
-  printGroup('add', grouped.add, chalk.green);
-  printGroup('update', grouped.update, chalk.yellow);
-  printGroup('delete', grouped.delete, chalk.red);
-  printGroup('replace', grouped.replace, chalk.magenta);
+  printGroup('Add', grouped.add, chalk.green);
+  printGroup('Update', grouped.update, chalk.yellow);
+  printGroup('Delete', grouped.delete, chalk.red);
+  printGroup('Replace', grouped.replace, chalk.magenta);
 }
 
 function summarizeCounts(grouped) {

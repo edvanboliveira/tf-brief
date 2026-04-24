@@ -1,5 +1,7 @@
 dist/
-.terraform/*
+*.exe
+.terraform/
 package-lock.json
+node_modules/
 *.tf
 plano
