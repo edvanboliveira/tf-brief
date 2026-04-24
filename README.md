@@ -1,75 +1,33 @@
-# 🚀 tf-brief
+🚀 tf-brief
 
-Uma ferramenta simples para gerar um resumo de planos do Terraform, tornando a visualização mais rápida e legível do que o output padrão.
+Uma ferramenta simples para resumir planos do Terraform e facilitar a leitura das mudanças com mais rapidez e clareza.
 
----
+📌 Sobre
 
-## 📌 Sobre
+O Terraform fornece um output de plan bastante verboso e detalhado, o que pode dificultar uma visão rápida das alterações na infraestrutura.
 
-O **tf-brief** foi criado para facilitar a visualização do output do `terraform plan`, destacando de forma clara:
+O tf-brief não substitui essa visualização nativa, ele a complementa, oferecendo um resumo simplificado para facilitar a compreensão inicial do impacto do plano.
 
-* ➕ Recursos a serem criados
-* 🔄 Recursos a serem atualizados
-* ❌ Recursos a serem destruídos
-* ♻️ Recursos que serão recriados
+Em cenários onde é necessário mais profundidade, o output original do Terraform ainda é essencial para análise detalhada.
 
-Tudo isso em um formato limpo, direto e fácil de entender.
+imagem de uso#######
 
----
+⚙️ Requisitos
 
-## ⚙️ Instalação
+Node.js instalado
 
-### Usando Node.js
+📦 Instalação do tf-brief
 
-```bash
-npm install
-npm link
-```
+npm install -g tf-brief@latest
 
----
+🚀 Exemplo de Usabilidade
 
-## 🚀 Uso
-
-### 1. Gerar o plano do Terraform
-
-```bash
 terraform plan -out=plano
-```
 
-### 2. Executar o tf-brief
-
-```bash
 tf-brief plano
-```
 
----
+resultado
 
-## 🔥 Exemplo
-
-imagem.jpg do exemplo
-
----
-
-## 🧠 Como funciona
-
-O tf-brief lê o arquivo gerado pelo Terraform (`.tfplan`) e apresenta um resumo simplificado das mudanças que serão aplicadas.
-
----
-
-## 💡 Por que usar?
-
-O output padrão do Terraform pode ser verboso e difícil de ler.
-O **tf-brief** resolve isso trazendo uma visão rápida e objetiva do que realmente importa.
-
----
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas!
-Sinta-se à vontade para abrir issues ou pull requests.
-
----
-
-## 📄 Licença
+📄 Licença
 
 MIT
