@@ -22,8 +22,10 @@ try {
   const grouped = categorize(plan);
   const summary = summarizeCounts(grouped);
 
-  printSummary(summary);
   printTable(grouped);
+//results breakdown
+  printSummary(summary);
+
 } catch (err) {
   console.error('Erro:', err.message);
 }
