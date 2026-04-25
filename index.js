@@ -69,7 +69,7 @@ function printSummary(summary) {
     chalk.bold('\nTotal Changes:\n\n') +
     [
       chalk.green(`Add: ${summary.add}`),
-      chalk.yellow(`Change: ${summary.update}`),
+      chalk.yellow(`Update: ${summary.update}`),
       chalk.red(`Delete: ${summary.delete}`),
       chalk.blue(`Replace: ${summary.replace}`)
     ].join('  ')
